@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:app2/main.dart';
 import 'package:flutter/material.dart';
 
@@ -46,6 +47,7 @@ Widget titleSection = Container(
   ),
 );
 
+ // ignore: no_leading_underscores_for_local_identifiers
  Column _buildButtonColumn(Color color, IconData icon, String label) {
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -107,12 +109,13 @@ Widget textSection = const Padding(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [Image.asset('imagenes/5.jpg',width: 400,height: 240,fit: BoxFit.cover,),
-            const DrawerHeader(
-              decoration: BoxDecoration(
+            /* const DrawerHeader(
+              
+             /*  decoration: BoxDecoration(
                 color: Color.fromARGB(255, 11, 109, 76),
-              ),
-              child: Text('Producto y otros :)'),
-            ),
+              ), */
+              child: Text(''),
+            ), */
             ListTile(
               title: const Text('Pagina principal'),
               onTap: () {

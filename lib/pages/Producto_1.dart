@@ -1,5 +1,8 @@
+// ignore: file_names
 import 'package:app2/main.dart';
 import 'package:flutter/material.dart';
+
+import 'login_page.dart';
 
 
 class Productos extends StatelessWidget {
@@ -37,15 +40,16 @@ Widget titleSection = Container(
         ),
       ),
       /*3*/
-      Icon(
+      const Icon(
         Icons.star,
-        color: Colors.red[500],
+        color: Color.fromARGB(255, 13, 199, 183),
       ),
       const Text('5'),
     ],
   ),
 );
 
+ // ignore: no_leading_underscores_for_local_identifiers
  Column _buildButtonColumn(Color color, IconData icon, String label) {
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -92,7 +96,7 @@ Widget textSection = const Padding(
 
       home: Scaffold(
         appBar: AppBar(
-           backgroundColor:  Color.fromARGB(209, 6, 119, 104),
+           backgroundColor:  const Color.fromARGB(209, 6, 119, 104),
           title: const Text('Productos'),
         ),
         body: ListView(
@@ -107,27 +111,27 @@ Widget textSection = const Padding(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [Image.asset('imagenes/5.jpg',width: 400,height: 240,fit: BoxFit.cover,),
-            const DrawerHeader(
-              decoration: BoxDecoration(
+           /*  const DrawerHeader(
+              /* decoration: BoxDecoration(
                 color: Color.fromARGB(255, 11, 109, 76),
-              ),
+              ), */
               child: Text('Producto y otros :)'),
-            ),
+            ), */
             ListTile(
               title: const Text('Pagina principal'),
               onTap: () {
                    Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => MyApp()),
+                    MaterialPageRoute(builder: (context) => const MyApp()),
                    );
               },
             ),
             ListTile(
-              title: const Text('.'),
+              title: const Text('Inicio de sesion'),
               onTap: () {
                 Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => MyApp()),
+                MaterialPageRoute(builder: (context) => const LoginPage()),
   );
               },
             ),

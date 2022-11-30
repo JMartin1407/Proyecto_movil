@@ -1,106 +1,80 @@
-/* import 'package:flutter/material.dart';
-import 'package:app2/main.dart';
+import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget{
+  
   static String  id = "Login_page";
+
+  const LoginPage({super.key});
   
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 11, 137, 168),
-        body: Center(
+        backgroundColor: const  Color.fromARGB(209, 6, 119, 104),
+        body: 
+        Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: [Image.asset('imagenes/8.jpg',width: 400,height: 240,fit: BoxFit.cover,),
             Text(
-              "Bienvenido(a) a \n products industris".toUpperCase(),
+              "Bienvenido(a) a \n Oaxaca entre tus manos".toUpperCase(),
                textAlign:  TextAlign.center,
-               style: TextStyle(
+               style: const TextStyle(
                 color: Colors.white,
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
                 fontFamily: 'impact',
                ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15.0,
                 ),
                 Row(
                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    // ignore: prefer_const_literals_to_create_immutables
                     children: [
-                      Text('Registrate',
+                      const Text('Registrate',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        
+                      ),
+                      ),
+                      const Text('Iniciar sesion', 
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
                       ),
-                      ),
-                      Text('Iniciar sesion', 
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.bold,
-                      ),
                       )
                     ],
                 ),
-              SizedBox(
+              const SizedBox(
                 height: 25.0,
               ),
               _textFieldName(),
-               SizedBox(
+               const SizedBox(
                 height: 15.0,
               ),
               _TextFieldEmail(),
-               SizedBox(
+               const SizedBox(
                 height: 15.0,
               ),
               _TextFieldPassword(),
-               SizedBox(
+               const SizedBox(
                 height: 15.0,
               ),
           ]),
         ),
+         
         )
       );
+      
   }
   Widget _textFieldName() {
-return _TextFieldGeneral(
-  labelText: 'nombre',
-  hintText: 'Martin',
-  onChanged: (value) {},
-);
-  }
-  Widget _TextFieldEmail() {
-return TextField();
-  }
-
-  Widget _TextFieldPassword() {
-return TextField();
-  }
-  
-
-  
-
-
-}
-class _TextFieldGeneral extends StatelessWidget{
-  final String labelText;
-  final String hintText;
-  final Function onChanged;
-  final TextInputType keyboardType;
-  const _TextFieldGeneral({ 
-     required this.labelText, 
-     required this.hintText, 
-     required this.onChanged,
-     required this.keyboardType});
-  
- @override
-  Widget build(BuildContext context) {  
-  
-  return Container(
-    margin: EdgeInsets.symmetric(
+return Container(
+    margin: const EdgeInsets.symmetric(
       horizontal: 30.0
     ),
     decoration: BoxDecoration(
@@ -108,16 +82,65 @@ class _TextFieldGeneral extends StatelessWidget{
        borderRadius: BorderRadius.circular(30),
     ),
     child: TextField(
-      keyboardType: keyboardType,
-    decoration: InputDecoration(
-      prefixIcon: Icon(Icons.person_outlined
-      ),
-      labelText: labelText,
-      hintText: hintText,
+      
+    decoration: const InputDecoration(
+      prefixIcon: Icon(Icons.person_outlined),
+       labelText: "nombre",
+      hintText: "", 
     ),
-     onChanged: onChanged,
+      onChanged: (value){}, 
     ),
   );
   }
-  
- } */
+
+
+  }
+
+  // ignore: non_constant_identifier_names
+  Widget _TextFieldEmail() {
+
+return Container(
+    margin: const EdgeInsets.symmetric(
+      horizontal: 30.0
+    ),
+    decoration: BoxDecoration(
+       color: Colors.white,
+       borderRadius: BorderRadius.circular(30),
+    ),
+    child: TextField(
+      
+    decoration: const InputDecoration(
+      prefixIcon: Icon(Icons.email),
+       labelText: "Correo",
+      hintText: "", 
+    ),
+      onChanged: (value){}, 
+    ),
+  );
+  }
+
+  // ignore: non_constant_identifier_names
+  Widget _TextFieldPassword() {
+
+return Container(
+    margin: const EdgeInsets.symmetric(
+      horizontal: 30.0
+    ),
+    decoration: BoxDecoration(
+       color: Colors.white,
+       borderRadius: BorderRadius.circular(30),
+    ),
+    
+    child: TextField(
+      
+    decoration: const InputDecoration(
+      prefixIcon: Icon(Icons.password),
+      
+       labelText: "Contraseña",
+      hintText: "", 
+    ),
+      onChanged: (value){}, 
+    ),
+    
+  );
+  }

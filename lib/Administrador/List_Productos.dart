@@ -1,5 +1,3 @@
-
-
 import 'package:app2/pages/Producto_1.dart';
 import 'package:app2/pages/Producto_2.dart';
 import 'package:flutter/material.dart';
@@ -53,7 +51,6 @@ class Lista_Productos extends StatelessWidget {
          const <Widget>[
           FichaProducto(nombre: 'Producto ejemplo', descripcion: 'Breve descripción del producto de ejemplo',
               precio: 21, imagen: '2.jpg', ),
-              
           FichaProducto(nombre: 'Producto ejemplo', descripcion: 'Breve descripción del producto de ejemplo',
               precio: 21, imagen: '3.jpg'),
           FichaProducto(nombre: 'Producto ejemplo', descripcion: 'Breve descripción del producto de ejemplo',
@@ -68,12 +65,12 @@ class Lista_Productos extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [Image.asset('imagenes/5.jpg',width: 400,height: 240,fit: BoxFit.cover,),
-           /*  const DrawerHeader(
-              /* decoration: BoxDecoration(
+            const DrawerHeader(
+              decoration: BoxDecoration(
                 color: Color.fromARGB(255, 11, 109, 76)
-              ), */
+              ),
               child: Text('Producto y otros :)'),
-            ), */
+            ),
             ListTile(
               title: const Text('Pagina principal'),
               onTap: () {

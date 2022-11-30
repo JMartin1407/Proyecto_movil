@@ -1,10 +1,7 @@
-
 import 'package:app2/pages/Lista_productos.dart';
 import 'package:app2/pages/Producto_1.dart';
 import 'package:app2/pages/login_page.dart';
 import 'package:flutter/material.dart';
-
-import 'Administrador/Nuevo_Product.dart';
 
 void main() => runApp(const MyApp());
 
@@ -50,10 +47,10 @@ class MyHomePage extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [Image.asset('imagenes/5.jpg',width: 400,height: 240,fit: BoxFit.cover,),
-           /*  const DrawerHeader(
-             /*  decoration: BoxDecoration(
+            /* const DrawerHeader(
+              decoration: BoxDecoration(
                 color: Color.fromARGB(255, 11, 109, 76),
-              ), */
+              ),
               child: Text('Productos y otros :)'),
             ), */
             ListTile(
@@ -75,24 +72,24 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
-              title: const Text('Inicio de sesion'),
+              title: const Text('.'),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+              
+            ),
+            ListTile(
+              title: const Text('Iniciar Sesion'),
               onTap: () {
                 Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const LoginPage()),
   );
               },
-              
             ),
-            /* ListTile(
-              title: const Text('Iniciar Sesion'),
-              onTap: () {
-                Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MyCustomForm()),
-  );
-              },
-            ), */
           ],
         ),
       ),
